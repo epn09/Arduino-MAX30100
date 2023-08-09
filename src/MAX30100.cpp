@@ -26,9 +26,6 @@ MAX30100::MAX30100()
 
 bool MAX30100::begin()
 {
-    Wire.begin();
-    Wire.setClock(I2C_BUS_SPEED);
-
     if (getPartId() != EXPECTED_PART_ID) {
         return false;
     }
